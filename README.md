@@ -4,9 +4,11 @@ CI/CD signifie Intégration Continue (Continuous Integration) et Déploiement Co
 
 C’est un ensemble de pratiques qui automatisent l’intégration des modifications de code provenant de plusieurs contributeurs dans un même projet logiciel, et qui automatisent également le processus de déploiement de ces applications en production.
 	•	Intégration Continue (CI) : c’est la pratique qui consiste à tester et à fusionner automatiquement le nouveau code dans la branche principale, de manière fréquente — souvent plusieurs fois par jour.
-🎯 Objectif : détecter les bogues et les problèmes d’intégration le plus tôt possible.
+	<br>
+Objectif : détecter les bogues et les problèmes d’intégration le plus tôt possible.
 	•	Déploiement/Livraison Continue (CD) : garantit qu’une fois le code testé et fusionné, il est automatiquement (ou facilement) déployé vers les environnements de préproduction ou de production.
-🎯 Objectif : rendre les déploiements fiables, rapides et routiniers.
+	<br>
+ Objectif : rendre les déploiements fiables, rapides et routiniers.
 
 Ensemble, le CI/CD aide les équipes à :
 	•	Livrer des fonctionnalités plus rapidement
@@ -21,7 +23,7 @@ Ensemble, le CI/CD aide les équipes à :
 Dans les petits projets, des pipelines CI/CD simples peuvent suffire.
 Mais à mesure que le projet grandit (plus de contributeurs, plus de code, plus d’environnements), l’évolutivité devient essentielle.
 
-👉 Pourquoi l’évolutivité est importante :
+Pourquoi l’évolutivité est importante :
 	•	Forte parallélisation : pour exécuter les tests et les compilations plus rapidement, il faut pouvoir exécuter plusieurs workflows simultanément.
 Déploiement multi-environnements : les environnements de développement, de préproduction (staging) et de production peuvent avoir des configurations et des processus de validation différents.
 
@@ -31,7 +33,7 @@ Maintenabilité : les grands projets ont besoin de workflows modulaires et réut
 
 ⸻
 
-👉 Si votre CI/CD n’est pas évolutif, vous risquez de rencontrer :
+ Si votre CI/CD n’est pas évolutif, vous risquez de rencontrer :
 	•	Des temps d’attente longs pour les builds
 	•	Une augmentation des coûts due à des workflows inefficaces
 	•	Des échecs fréquents de déploiement
@@ -73,11 +75,17 @@ Hiérarchie rapide :
 
 Workflow
  ├── Job 1
+ <br>
  │    ├── Step 1
+ <br>
  │    ├── Step 2
+ <br>
  │    └── Step 3
+ <br>
  └── Job 2
+ <br>
       ├── Step 1
+	  <br>
       └── Step 2
 
 
@@ -85,7 +93,7 @@ Workflow
 
 2.2 Concepts clés : Événements, Runners et Artifacts
 
-⚙ Événements (Events)
+ Événements (Events)
 
 Un événement est ce qui déclenche l’exécution d’un workflow.
 
@@ -106,7 +114,7 @@ on:
 
 ⸻
 
-💻 Runners
+ Runners
 
 Un runner est le serveur qui exécute vos workflows.
 	•	GitHub-hosted runners : fournis par GitHub (Ubuntu, Windows, macOS disponibles).
@@ -121,7 +129,7 @@ runs-on: ubuntu-latest
 
 ⸻
 
-📦 Artifacts (Artefacts)
+ Artifacts (Artefacts)
 
 Les artifacts sont des fichiers créés pendant l’exécution d’un workflow, que vous pouvez sauvegarder ou partager entre plusieurs jobs.
 
